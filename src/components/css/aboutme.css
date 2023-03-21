@@ -1,0 +1,59 @@
+.Aboutdiv{
+  padding: 10% 4% 0 0;
+  text-align: center;
+}
+.aboutmeimage{
+  width:15%;
+  /* padding-top:3%; */
+  padding-left:4%;
+}
+.AboutHeading{
+  color: #EA5455;
+}
+.subheading{
+  color: #fff;
+  padding-top: 2%;
+  padding-right: 2%;
+  cursor: pointer;
+  text-decoration:underline;
+  text-decoration-color:#EA5455;
+  text-decoration-thickness:0.25rem;
+  font-weight: bold;
+}
+.aboutpara, .educationheading {
+  color:#fff;
+  text-align: left;
+  padding-bottom: 1%;
+  padding-bottom: 1%;
+  padding-left: 8%;
+}
+.aboutme{
+  width:65rem;
+  padding-top: 6%;
+}   
+@media screen and (max-width:523px){
+  .flexbox{
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+  }
+  .flexbox .aboutimage{
+    width:50%;
+    float:fit-content;
+    padding-left: 35%;
+  }
+  .flexbox .textinaboutme{
+    padding-left: none;
+  }
+  .flexbox{
+    position: relative;
+    right: 1  5%
+  }
+  .aboutme{
+    width:100%;
+  }
+  .aboutmeimage{
+    position:relative;
+    left: 35%
+  }
+}

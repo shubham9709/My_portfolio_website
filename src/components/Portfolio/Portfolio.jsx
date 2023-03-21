@@ -36,9 +36,12 @@ function Portfolio() {
   return (
     <Box id="portfolio" className={classes.mainDiv}>
     <Typography variant="h3" style={{textAlign:"center",paddingBottom:"2%"}}>PORTFOLIO</Typography>
-      <Box className={classes.card}>         
+      {/* <Box className={classes.card}>         
           {detail.map(createCard)} 
-       </Box>
+       </Box> */}
+       <div className="items-container" style={{display:"flex", jusitifyContent: "center", alignItems:"center",flexWrap:"wrap"}}>
+          {detail.map(createCard)} 
+       </div>
     </Box>
     
   );

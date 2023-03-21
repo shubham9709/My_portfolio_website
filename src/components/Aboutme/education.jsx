@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { makeStyles } from "@material-ui/core";
+import "../css/aboutme.css";
 const useStyles=makeStyles({
   educationheading:{
     color:"#fff",
@@ -13,7 +14,7 @@ const useStyles=makeStyles({
 const Education = ()=>{
   const classes = useStyles();
   return (
-    <Box className={classes.educationheading}>
+    <Box className="educationheading" style={{paddingLeft:"5%"}}>
       <Typography style={{color:"#EA5455",paddingTop:"8%"}}>2017</Typography>
       <Typography>I completed my 10th in 2017 from St. Francis School Jasidih.</Typography>
       <Typography style={{paddingBottom:"2%"}}>Secured 93% in boards.</Typography>

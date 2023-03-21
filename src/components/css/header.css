@@ -1,0 +1,48 @@
+
+.header{
+  background-color: black;
+  height: 6rem
+}
+.header .navbar{
+  display: flex;
+  justify-content: space-between;
+}
+.header .navbar .logo{
+  color: #F7C04A;
+  font-weight: bold;
+  margin: 0 10% 7% 1%;
+  font-size: 2.25rem;
+  padding-top: 0.75%;
+}
+.header .navbar .nav-links ul{
+  list-style: none;
+  display: flex;
+}
+.header .navbar .nav-links ul a{
+  text-decoration: none;
+  margin-right: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0.75rem 3rem;
+  cursor:pointer;
+  text-decoration:none;
+  scroll-behavior:smooth;
+}
+
+@media only screen and (max-width: 523px){
+  .header .navbar{
+    flex-direction: column;
+  }
+  .header .navbar .nav-links ul{
+    flex-direction: column;
+  }
+  .header .navbar .nav-links ul a{
+    margin-top: 5px;
+  }
+  .header{
+    height: 20rem;
+    justify-content: left;
+    align-items: left;
+  }
+}

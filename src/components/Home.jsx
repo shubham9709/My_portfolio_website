@@ -2,22 +2,10 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import { makeStyles } from "@material-ui/core";
 import React from "react";
 import shubham from "./images/shubham1.png"
-const resume = "http://localhost:3000/resume.pdf";
-const useStyles = makeStyles({
-  image:{
-    marginTop:"5%",
-    paddingLeft:"20%",
-    height:"600px"
-  },
-  aboutme:{
-    padding:"10% 0 0 4%"
-  },
-  button:{
-    backgroundColor:"#EA5455"
-  }
-})
+import "./css/home.css";
+const resume = "https://myportfolio9709.netlify.app/resume.pdf";
+
 const Home = () =>{
-  const classes = useStyles();
   const downloadFile = (url) => {
     const fileName = url.split("/").pop();
     const aTag = document.createElement("a");
@@ -28,8 +16,8 @@ const Home = () =>{
     aTag.remove();
   }
   return (
-    <Grid  md={4} sm={2} id="home"  style={{display:"flex"}}>
-      <Box className={classes.aboutme}>
+    <Grid className="home" container id="home"  style={{display:"flex"}}>
+      <Grid item className="abtme">
       
         <Box style={{display:"flex",padding:"12% 0 0"}}>
           <Typography variant="h3"style={{fontWeight:"bold",color:"#fff"}}>Hi, I'm &nbsp;</Typography>
@@ -40,8 +28,10 @@ const Home = () =>{
           <Typography style={{fontWeight:"bold",color:"#EA5455",fontSize:"20px"}}>Developer</Typography>
         </Box>
         <Button onClick={() =>{downloadFile(resume);}} style={{backgroundColor:"#EA5455",height:"9%"}} variant="contained">Download CV</Button>
-      </Box>
-      <img src={shubham} className={classes.image} alt="Logo" />
+      </Grid>
+      <Grid item>
+        <img src={shubham} className="homeimage" alt="Logo" />
+      </Grid>
           
       
     </Grid>

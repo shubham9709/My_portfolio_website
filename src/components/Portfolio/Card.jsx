@@ -9,6 +9,7 @@ const useStyles = makeStyles({
     padding: "2rem",
     borderRadius: "3px",
     boxShadow: "12px 12px 2px 1px rgba(0,0,255, 0.2)",
+    marginLeft:"6%"
     
   },
   image:{
@@ -26,45 +27,16 @@ const useStyles = makeStyles({
 export default function Card(props) {
   const classes = useStyles();
   return (
-    <Box className={classes.maindiv} style={{color:"#fff"}}>
+    <Box className={classes.maindiv} style={{color:"#fff", marginRight:"5%"}}>
       
         <dt>
           <span><img className={classes.image} style={{width:"300px",height:"165px"}} src={props.image} alt="Logo" /></span>
-          <span><Typography style={{textAlign:"center"}}>{props.name}</Typography></span>
+          <span><Typography style={{textAlign:"center",fontSize:"18px"}}>{props.name}</Typography></span>
         </dt>
         <dd>
-          <Typography style={{textAlign:"center"}}>{props.detail}</Typography>
+          <Typography style={{textAlign:"center",width:"300px"}}>{props.detail}</Typography>
         </dd>
       
     </Box>
   )
 };
-
-// const Item = styled(Paper)(({ theme }) => ({
-//   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-//   ...theme.typography.body2,
-//   padding: theme.spacing(1),
-//   textAlign: 'center',
-//   color: theme.palette.text.secondary,
-// }));
-
-// export default function BasicGrid() {
-//   return (
-//     <Box sx={{ flexGrow: 1 }}>
-//       <Grid container spacing={2}>
-//         <Grid item xs={8}>
-//           <Item>xs=8</Item>
-//         </Grid>
-//         <Grid item xs={4}>
-//           <Item>xs=4</Item>
-//         </Grid>
-//         <Grid item xs={4}>
-//           <Item>xs=4</Item>
-//         </Grid>
-//         <Grid item xs={8}>
-//           <Item>xs=8</Item>
-//         </Grid>
-//       </Grid>
-//     </Box>
-//   );
-// }
